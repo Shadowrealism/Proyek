@@ -8,8 +8,8 @@ $kunci = new PDO($dsn, "root", "");
             // get available balance of the transferer account
             $sql = 'SELECT balance FROM account WHERE id= ?';
             $stmt = $kunci->prepare($sql);
-            $data = $_POST['id']
-            $stmt-> execute($stmt);
+            $data = $_POST['id'];
+            $stmt-> execute($data);
             $data = $stmt-> fetch();
 
             // add to the receiving account
